@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ffe5ec, #ffb3c6);
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* কার্ড ডিজাইন */
+.card {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    border: 2px solid #ff4d6d;
+}
+
+.title {
+    color: #ff4d6d;
+    margin-bottom: 15px;
+}
+
+.rose-icon {
+    font-size: 50px;
+    animation: pulse 2s infinite;
+    margin-bottom: 15px;
+}
+
+.message {
+    font-size: 18px;
+    color: #4a4a4a;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* বাটন */
+.gift-btn {
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.gift-btn:hover {
+    background: #ff758f;
+    transform: scale(1.05);
+}
+
+.gift-display {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff0f3;
+    border-radius: 10px;
+    border: 1px dashed #ff4d6d;
+}
+
+.id-hidden {
+    display: none;
+}
+
+/* হার্টবিট অ্যানিমেশন */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* গোলাপের পাপড়ি অ্যানিমেশন */
+.rose-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.petal {
+    position: absolute;
+    color: #ff4d6d;
+    font-size: 24px;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-20px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
